@@ -26,8 +26,9 @@ export class SignalsComponent {
   decrement() {
     this.counter.update((oldcounter) => oldcounter-1);
     //this.actions.push('DECREMENT');
-    //this.actions.mutate((oldAction) => oldAction.push('DECREMENT'));
-    this.actions.update((oldAction) => [...oldAction, 'DECREMENT']);
+    this.actions.mutate((oldAction) => oldAction.push('DECREMENT'));
+    //this.actions.update((oldAction) => [...oldAction, 'DECREMENT']);
+
   }
 }
 
